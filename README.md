@@ -77,9 +77,39 @@ Discord and games chew through cache, logs and temp files fast. Windows doesn't 
 
 ## 💻 Requirements
 
-- Windows 10 or later
-- Python 3 — download from [python.org](https://www.python.org/downloads/)
-- Everything else (npm, pip, Docker etc.) is optional — skipped if not installed
+### Required
+| What | Why | Get It |
+|---|---|---|
+| **Windows 10 or later** | Needed for ANSI colour support in terminal | Already have it |
+| **Python 3.8+** | Runs the script | [python.org/downloads](https://www.python.org/downloads/) — tick **"Add Python to PATH"** during install |
+
+### Optional — script skips these gracefully if not installed
+| What | Why you'd want it | Get It |
+|---|---|---|
+| **Git** | Push changes to GitHub | [git-scm.com](https://git-scm.com/download/win) |
+| **Node.js / npm** | Cleans npm cache | [nodejs.org](https://nodejs.org/en/download/) |
+| **pip** | Cleans Python package cache | Comes with Python 3 |
+| **Docker Desktop** | `--full` mode prunes unused images & containers | [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) |
+| **Steam** | Cleans shader cache automatically if installed | [store.steampowered.com](https://store.steampowered.com/about/) |
+| **Epic Games Launcher** | Cache cleared automatically if installed | [epicgames.com](https://store.epicgames.com/en-US/download) |
+
+### Running as Administrator
+Some steps need Admin rights (Windows Update cache, Prefetch, Event Logs, Disk Cleanup). Three ways:
+
+**Option A — Command Prompt:**
+```cmd
+# Right-click "Command Prompt" → Run as administrator, then:
+python windows_clean.py
+```
+
+**Option B — PowerShell:**
+```powershell
+# Right-click "PowerShell" → Run as administrator, then:
+python windows_clean.py
+```
+
+**Option C — File Explorer:**
+Right-click `windows_clean.py` → **Run as administrator**
 
 ---
 
